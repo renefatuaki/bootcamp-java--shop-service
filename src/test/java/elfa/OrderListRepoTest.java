@@ -59,17 +59,17 @@ class OrderListRepoTest {
 
     @Test
     void add() {
-        int prevSize = orderList.orders.size();
+        int prevSize = orderList.getOrders().size();
         orderList.add(thirdOrder);
-        int newSize = orderList.orders.size();
+        int newSize = orderList.getOrders().size();
         assertEquals(prevSize + 1, newSize);
     }
 
     @Test
     void remove() {
-        int prevSize = orderList.orders.size();
+        int prevSize = orderList.getOrders().size();
         orderList.remove("0001");
-        int newSize = orderList.orders.size();
+        int newSize = orderList.getOrders().size();
         assertEquals(prevSize - 1, newSize);
     }
 }

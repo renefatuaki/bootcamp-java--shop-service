@@ -7,13 +7,21 @@ package elfa;
 import java.util.*;
 
 public class OrderMapRepo implements OrderRepo {
-    Map<String, Order> orders = new HashMap<>();
+    private Map<String, Order> orders = new HashMap<>();
 
     public OrderMapRepo(Map<String, Order> orders) {
         this.orders = orders;
     }
 
     public OrderMapRepo() {
+    }
+
+    public Map<String, Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Map<String, Order> orders) {
+        this.orders = orders;
     }
 
     @Override

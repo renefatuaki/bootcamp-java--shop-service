@@ -8,13 +8,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class OrderListRepo implements OrderRepo {
-    Set<Order> orders = new HashSet<>();
+    private Set<Order> orders = new HashSet<>();
 
     public OrderListRepo(Set<Order> orders) {
         this.orders = orders;
     }
 
     public OrderListRepo() {
+    }
+
+    public Set<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<Order> orders) {
+        this.orders = orders;
     }
 
     @Override

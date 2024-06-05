@@ -11,7 +11,7 @@ public class ShopService {
     }
 
     public static boolean isProduct(ProductRepo productRepo, String name) {
-        Product productResult = productRepo.products.stream().filter(product -> product.name().equals(name)).findFirst().orElse(null);
+        Product productResult = productRepo.getProducts().stream().filter(product -> product.name().equals(name)).findFirst().orElse(null);
         return productResult != null;
     }
 }

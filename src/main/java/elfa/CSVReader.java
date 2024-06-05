@@ -6,8 +6,7 @@ import java.math.BigDecimal;
 import java.util.*;
 
 public class CSVReader {
-    String DELIMITER = ",";
-    File file;
+    private final File file;
 
     public CSVReader(File file) {
         this.file = file;
@@ -37,6 +36,7 @@ public class CSVReader {
         Map<String, String> values = new HashMap<>();
 
         try (Scanner rowScanner = new Scanner(line)) {
+            String DELIMITER = ",";
             rowScanner.useDelimiter(DELIMITER);
 
             if (rowScanner.hasNext()) {

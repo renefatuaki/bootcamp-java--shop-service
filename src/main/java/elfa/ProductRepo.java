@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ProductRepo {
-    Set<Product> products = new HashSet<>();
+    private Set<Product> products = new HashSet<>();
 
     public ProductRepo(Set<Product> products) {
         this.products = products;
@@ -19,6 +19,10 @@ public class ProductRepo {
 
     public Set<Product> getProducts() {
         return products;
+    }
+
+    public void setProducts(Set<Product> products) {
+        this.products = products;
     }
 
     public Product getProductByName(String name) {
